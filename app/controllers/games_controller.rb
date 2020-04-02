@@ -1,18 +1,18 @@
-class GamesController < OpenReadController
-  #things added to the before here will ONLY work on the current user, so if I want show to only work on current user, add it back
-  before_action :set_game, only: [:update, :destroy]
+class GamesController < ProtectedController
+  #things added to the before_action here will ONLY work on the current user. current_user is created in protected_controller
+  before_action :set_game, only: [:show, :update, :destroy]
 
   # GET /games
   def index
-    #@games = current_user.games.all
-    @games = Game.all
+    @games = current_user.games.all
+    #@games = Game.all
     
     render json: @games
   end
 
   # GET /games/1
   def show
-    @game = Game.find(params[:id])
+    #@game = Game.find(params[:id])
     render json: @game
   end
 
