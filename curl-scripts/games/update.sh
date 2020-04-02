@@ -9,7 +9,8 @@ curl "http://localhost:4741/games/${ID}" \
     "game": {
       "name": "'"${NAME}"'",
       "score": "'"${SCORE}"'",
-      "review": "'"${REVIEW}"'"
+      "review": "'"${REVIEW}"'",
+      "user_id": "'"${USERID}"'"
     }
   }'
 

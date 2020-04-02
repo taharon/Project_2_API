@@ -1,0 +1,5 @@
+git push heroku master
+heroku run rails db:migrate
+heroku restart
+
+heroku logs --tail
