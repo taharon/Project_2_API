@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_152150) do
+ActiveRecord::Schema.define(version: 2020_04_06_183119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 2020_04_02_152150) do
     t.index ["user_id"], name: "index_examples_on_user_id"
   end
 
+  create_table "game_instances", force: :cascade do |t|
+    t.date "when"
+    t.text "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "games", force: :cascade do |t|
     t.string "name"
     t.decimal "score"
@@ -31,6 +38,16 @@ ActiveRecord::Schema.define(version: 2020_04_02_152150) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_games_on_user_id"
+  end
+
+  create_table "played_games", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "game_instance_id"
+    t.text "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_instance_id"], name: "index_played_games_on_game_instance_id"
+    t.index ["user_id"], name: "index_played_games_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,4 +62,6 @@ ActiveRecord::Schema.define(version: 2020_04_02_152150) do
 
   add_foreign_key "examples", "users"
   add_foreign_key "games", "users"
+  add_foreign_key "played_games", "game_instances"
+  add_foreign_key "played_games", "users"
 end

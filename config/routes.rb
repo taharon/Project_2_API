@@ -2,6 +2,8 @@
 
 Rails.application.routes.draw do
   # RESTful routes
+  resources :played_games, except: %i[new edit]
+  resources :game_instances, except: %i[new edit]
   resources :examples, except: %i[new edit]
   resources :games, except: %i[new edit]
 
