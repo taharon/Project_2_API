@@ -15,6 +15,7 @@ class GameInstancesController < ApplicationController
 
   # POST /game_instances
   def create
+    
     @game_instance = GameInstance.new(game_instance_params)
 
     if @game_instance.save
