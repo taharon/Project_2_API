@@ -1,4 +1,4 @@
-class PlayedGamesController < OpenReadController
+class PlayedGamesController < ApplicationController
   before_action :set_played_game, only: [:update, :destroy]
 
   # GET /played_games
@@ -26,7 +26,7 @@ class PlayedGamesController < OpenReadController
 
   # POST /played_games
   def create
-    @played_game = current_user.played_games.build(played_game_params)
+    @played_game = PlayedGame.new(played_game_params)
 
     if @played_game.save
       render json: @played_game, status: :created, location: @played_game
@@ -52,7 +52,7 @@ class PlayedGamesController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_played_game
-      @played_game = current_user.played_games.find(params[:id])
+      @played_game = PlayedGame.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
