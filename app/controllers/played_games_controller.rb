@@ -16,13 +16,13 @@ class PlayedGamesController < ApplicationController
 #this will use the :id to find all played_games with that player_id
 
   #GET /played_games/player
-  #def played
-  #  @played_games = current_user.played_games.all
-#
-  #  render json: @played_games
-  #  #render json: PlayedGame.where(game_instance_id: @games_list.game_instance_id)
-  ##  render json: PlayedGame.find(params[:id])
-  #end
+  def played
+    @played_games = current_user.played_games.all
+
+    render json: @played_games
+    #render json: PlayedGame.where(game_instance_id: @games_list.game_instance_id)
+  #  render json: PlayedGame.find(params[:id])
+  end
 
   # POST /played_games
   def create

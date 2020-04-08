@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   delete '/sign-out' => 'users#signout'
   patch '/change-password' => 'users#changepw'
   get '/users' => 'users#index'
-  #get '/played_games/player' => 'played_games#played'
+  get '/played_games/player' => 'played_games#played'
 end
