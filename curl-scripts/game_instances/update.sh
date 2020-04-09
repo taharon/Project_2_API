@@ -1,6 +1,6 @@
 # Ex: TOKEN=tokengoeshere ID=idgoeshere TEXT=textgoeshere sh curl-scripts/examples/update.sh
 
-curl "http://localhost:4741/games_instances/${ID}" \
+curl "http://localhost:4741/game_instances/${ID}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \

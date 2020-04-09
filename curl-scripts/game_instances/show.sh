@@ -1,6 +1,6 @@
 # Ex: TOKEN=tokengoeshere ID=idgoeshere sh curl-scripts/examples/show.sh
 
-curl "http://localhost:4741/games_instances/${ID}" \
+curl "http://localhost:4741/game_instances/${ID}" \
   --include \
   --request GET \
   --header "Content-Type: application/json" \

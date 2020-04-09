@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get '/users' => 'users#index'
   # To make a new custom route attached to a route
   #get '/played_games_played' => 'played_games#played'
+  #post '/played_games_array_create' => 'played_games#create_with_array'  
 end

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/games_instances" \
+curl "http://localhost:4741/game_instances" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

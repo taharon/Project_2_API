@@ -8,15 +8,6 @@ class PlayedGamesController < OpenReadController
     #render json: PlayedGame.where(game_instance_id: @played_games.game_instance.id)
   end
 
-  #GET /played_games/played
-  def played
-    @played_games = PlayedGame.all
-
-    render json: @played_games
-    #render json: PlayedGame.where(game_instance_id: @games_list.game_instance_id)
-  #  render json: PlayedGame.find(params[:id])
-  end
-
 # GET /played_games/1
   def show
     render json: PlayedGame.find(params[:id])
@@ -32,6 +23,24 @@ class PlayedGamesController < OpenReadController
       render json: @played_game.errors, status: :unprocessable_entity
     end
   end
+
+# send rails an array of played_games to create all of them
+#  def create_with_array
+#    puts params
+#    puts 'hello tal'
+#    params[:played_games].each do |index, player|
+#      puts player
+#      @played_game = PlayedGame.new(player.require(:played_game).permit(:user_id, :game_instance_id, :score))
+#      @played_game.save
+##this next bit crashes because you can't render multiple times
+##      if @played_game.save
+##        render json: @played_game, status: :created, location: @played_game
+##      else
+##        render json: @played_game.errors, status: :unprocessable_entity
+##      end
+#    end
+#    puts 'sup'
+#  end
 
   # PATCH/PUT /played_games/1
   def update
