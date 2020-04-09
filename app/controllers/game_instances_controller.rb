@@ -1,9 +1,9 @@
-class GameInstancesController < ApplicationController
-  before_action :set_game_instance, only: [:show, :update, :destroy]
+class GameInstancesController < ProtectedController
+  before_action :set_game_instance, only: [:update, :destroy]
 
   # GET /game_instances
   def index
-    @game_instances = GameInstance.all
+    @game_instances = current_user.game_instances.all
 
     render json: @game_instances
   end
@@ -16,7 +16,7 @@ class GameInstancesController < ApplicationController
   # POST /game_instances
   def create
     
-    @game_instance = GameInstance.new(game_instance_params)
+    @game_instance = current_user.game_instances.new(game_instance_params)
 
     if @game_instance.save
       render json: @game_instance, status: :created, location: @game_instance
@@ -42,7 +42,7 @@ class GameInstancesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_game_instance
-      @game_instance = GameInstance.find(params[:id])
+      @game_instance = current_user.game_instances.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
