@@ -3,19 +3,19 @@ The repo for the front end for this app is available at:
 [Board game front end repo.](https://github.com/taharon/boardgame_tracker)
 
 ## Tech
-JavaScript  
-jQuery  
-AJAX  
-Ruby on Rails  
-Heroku  
-Git  
-Github  
-Grunt  
-Bootstrap  
-Sass  
-HTML  
-CSS  
-Visual Studio Code (to develop)  
+- JavaScript  
+- jQuery  
+- AJAX  
+- Ruby on Rails  
+- Heroku  
+- Git  
+- Github  
+- Grunt  
+- Bootstrap  
+- Sass  
+- HTML  
+- CSS  
+- Visual Studio Code (to develop)  
 
 ## Wireframes
 I began with mockups of a board game library app, which would let you store the board games you owned and write reviews for them. I then wanted to add the ability to track when you've played board games, with who, and the scores you each got. These changes are as of  yet unfinished.
@@ -30,12 +30,12 @@ The initial ERD included only a library for storing board games. With the additi
 
 ## User Stories
 I created a basic set of user stories for the bare minimum a user should be able to do in order to track board games they owned, and to add a played game:  
-As an unregistered user, I'd like to register 
-As a registered user, I'd like to log in 
-As a logged in user, I'd like to log out 
-As a logged in user, I'd like to change password 
-As a logged in user, I'd like to add to my library 
-As a logged in user, I'd like to add a played game 
+- As an unregistered user, I'd like to register  
+- As a registered user, I'd like to log in  
+- As a logged in user, I'd like to log out  
+- As a logged in user, I'd like to change password  
+- As a logged in user, I'd like to add to my library  
+- As a logged in user, I'd like to add a played game  
 
 ## Development
 In order to begin the project, I broke down the files I would need to create, and their respective goals.  
@@ -50,7 +50,7 @@ I need to create a series of custom routes which would return joins of my played
 
 ## Up Next
 Change CSS to make it look nicer  
-Add friends list for users  
-Finish custom routes for played games update, delete  
-Allow users to show all games played or all games played with a certain user  
-Allow users to add a played game with an unregistered user (user XOR unregistered user)
+- Add friends list for users  
+- Finish custom routes for played games update, delete  
+- Allow users to show all games played or all games played with a certain user  
+- Allow users to add a played game with an unregistered user (user XOR unregistered user)
