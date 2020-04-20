@@ -1,6 +1,12 @@
 # Board Game Tracker
 The repo for the front end for this app is available at:  
-[Board game front end repo.](https://github.com/taharon/boardgame_tracker)
+[Boardgame Tracker App](https://taharon.github.io/boardgame_tracker/)
+[Boardgame tracker API](https://project-2-api-248.herokuapp.com/)
+[Board game tracker API repo](https://github.com/taharon/Project_2_API)
+
+## What is this for
+
+This app is to be used to track board games. It allows you to record which board games you own, a score each for them, and a review. The app currently also allows players to record games played with a date, players, and scores for each.  
 
 ## Tech
 - JavaScript  
@@ -30,6 +36,7 @@ The initial ERD included only a library for storing board games. With the additi
 
 ## User Stories
 I created a basic set of user stories for the bare minimum a user should be able to do in order to track board games they owned, and to add a played game:  
+
 - As an unregistered user, I'd like to register  
 - As a registered user, I'd like to log in  
 - As a logged in user, I'd like to log out  
