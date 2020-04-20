@@ -3,7 +3,7 @@
 The repo for the front end for this app is available at:  
 [Boardgame Tracker App](https://taharon.github.io/boardgame_tracker/)
 [Boardgame tracker API](https://project-2-api-248.herokuapp.com/)
-[Board game tracker API repo](https://github.com/taharon/Project_2_API)
+[Board game tracker Client repo](https://github.com/taharon/boardgame_tracker)
 
 ## What is this for
 
