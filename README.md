@@ -1,7 +1,7 @@
 # Board Game Tracker
 
-The repo for the front end for this app is available at:  
-[Boardgame Tracker App](https://taharon.github.io/boardgame_tracker/)
+A deployed version of and the API code for this app are available at:  
+[Boardgame Tracker Client](https://taharon.github.io/boardgame_tracker/)
 [Boardgame tracker API](https://project-2-api-248.herokuapp.com/)
 [Board game tracker Client repo](https://github.com/taharon/boardgame_tracker)
 
